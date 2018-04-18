@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+</head>
+<body>
+	<h2>User Input</h2>
+	<form method="post" action="user/act">
+		<table>
+			<tr>
+				<td><label>name</label></td>
+				<td>:</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td><label>address</label></td>
+				<td>:</td>
+				<td><input type="text" name="addr"></td>
+			</tr>
+		</table>
+		<br>
+		<input type="submit" value="Submit" name="">
+	</form>
+	<br>
+	<hr>
+	<h2>This is user whose has input their bio!</h2>
+	<ul>
+		<% list.forEach(function(daft) { %>
+			<li><%= daft.firstName + ' ' + daft.lastName %></li>
+		<% }); %>
+		
+	</ul>
+</body>
+</html>
